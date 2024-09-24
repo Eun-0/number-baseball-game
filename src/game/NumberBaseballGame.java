@@ -2,7 +2,7 @@ package game;
 
 import exception.input.InvalidInputException;
 import app.Display;
-import player.Player;
+import app.Player;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -47,14 +47,14 @@ public class NumberBaseballGame {
         display.displayStartGame();
 
         Player player = new Player();
-//        display.displayAnswer(this.answer); // 생성된 정답 확인
+        display.displayAnswer(this.answer); // 생성된 정답 확인
         while (true) {
             try {
                 display.displayGameProgress();
                 player.scanInput();
                 compareAnswerWithInput(this.getAnswer(), player.getInput());
 
-//                display.displayResult(this.getStrikeCount(), this.getBallCount());  // 입력값 확인
+                display.displayResult(this.getStrikeCount(), this.getBallCount());
                 if (this.getStrikeCount() == 3) {
                     break;
                 }

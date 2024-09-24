@@ -52,7 +52,7 @@ public class Player {
                 temp %= (int) Math.pow(10, count-1-i);
             }
         }
-        System.out.println(this.input);
+//        System.out.println(this.input); // Parsing 잘 되었는지 확인
     }
 
     public Set<Integer> getInput() {
