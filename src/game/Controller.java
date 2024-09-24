@@ -1,6 +1,6 @@
 package game;
 
-import Display;
+import app.Display;
 import exception.controller.InvalidControllerException;
 
 import java.util.Scanner;

@@ -1,7 +1,7 @@
 package game;
 
 import exception.input.InvalidInputException;
-import Display;
+import app.Display;
 import player.Player;
 
 import java.util.Iterator;
