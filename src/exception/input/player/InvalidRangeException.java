@@ -1,4 +1,4 @@
-package exception.input;
+package exception.input.player;
 
 public class InvalidRangeException extends InvalidInputException {
     public InvalidRangeException(int input) {

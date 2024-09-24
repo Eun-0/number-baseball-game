@@ -1,6 +1,6 @@
 package game;
 
-import exception.input.InvalidInputException;
+import exception.input.player.InvalidInputException;
 import app.Display;
 import app.Player;
 

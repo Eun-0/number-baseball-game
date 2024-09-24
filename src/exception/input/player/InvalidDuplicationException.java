@@ -1,4 +1,4 @@
-package exception.input;
+package exception.input.player;
 
 public class InvalidDuplicationException extends InvalidInputException {
     public InvalidDuplicationException(int input) {

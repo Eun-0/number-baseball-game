@@ -1,10 +1,7 @@
 package game;
 
-import exception.input.InvalidInputException;
-
 import app.Display;
-import exception.controller.InvalidControllerException;
-import exception.input.InvalidInputException;
+import exception.input.controller.InvalidControllerException;
 
 import java.util.Scanner;
 

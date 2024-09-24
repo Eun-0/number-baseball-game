@@ -1,9 +1,9 @@
 package app;
 
-import exception.input.InvalidInputException;
-import exception.input.InvalidDuplicationException;
-import exception.input.InvalidRangeException;
-import exception.input.InvalidTypeException;
+import exception.input.player.InvalidInputException;
+import exception.input.player.InvalidDuplicationException;
+import exception.input.player.InvalidRangeException;
+import exception.input.player.InvalidTypeException;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
