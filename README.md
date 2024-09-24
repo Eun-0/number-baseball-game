@@ -8,9 +8,15 @@
 <br>
 
 ## 2. 설계
-<https://1step2dream.tistory.com/18>
+### 필수 기능
+<https://1step2dream.tistory.com/18><br>
+<https://1step2dream.tistory.com/20><br>
+
+### 도전 기능
 
 <br>
 
-## 3. 메서드 구현
+## 3. 구현
+### 필수 기능
 <https://1step2dream.tistory.com/19>
+### 도전 기능
