@@ -1,9 +1,9 @@
-package game;
+package player;
 
-import exception.InvalidInputException;
-import exception.InvalidDuplicationException;
-import exception.InvalidRangeException;
-import exception.InvalidTypeException;
+import exception.input.InvalidInputException;
+import exception.input.InvalidDuplicationException;
+import exception.input.InvalidRangeException;
+import exception.input.InvalidTypeException;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

@@ -1,6 +1,8 @@
-package game;
+package game.numberBaseballGame;
 
-import exception.InvalidInputException;
+import exception.input.InvalidInputException;
+import display.Display;
+import player.Player;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -52,7 +54,7 @@ public class NumberBaseballGame {
                 player.scanInput();
                 compareAnswerWithInput(this.getAnswer(), player.getInput());
 
-                display.displayResult(this.getStrikeCount(), this.getBallCount());
+//                display.displayResult(this.getStrikeCount(), this.getBallCount());  // 입력값 확인
                 if (this.getStrikeCount() == 3) {
                     break;
                 }

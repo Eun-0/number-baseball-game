@@ -1,4 +1,4 @@
-package exception;
+package exception.input;
 
 public class InvalidTypeException extends InvalidInputException {
     public InvalidTypeException(String input) {
