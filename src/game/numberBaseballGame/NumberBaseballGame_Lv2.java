@@ -3,7 +3,6 @@ package game.numberBaseballGame;
 import exception.controller.InvalidControllerException;
 import exception.input.InvalidInputException;
 
-import display.Display_Lv2;
 import player.Player;
 
 import java.util.*;

@@ -1,5 +1,3 @@
-package display;
-
 import java.util.Set;
 
 public class Display {
@@ -23,5 +21,15 @@ public class Display {
 
     public void displayAnswer(Set<Integer> answer) {
         System.out.println(answer);
+    }
+
+    /* Level 2 */
+    public void displayController() {
+        System.out.println("환영합니다! 원하시는 번호를 입력해주세요");
+        System.out.println("1. 게임 시작하기 2. 게임 기록 보기 3. 종료하기");
+    }
+
+    public void displayEndGame() {
+        System.out.println("게임을 종료합니다!");
     }
 }

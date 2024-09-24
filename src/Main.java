@@ -1,12 +1,15 @@
-import game.numberBaseballGame.NumberBaseballGame;
-import game.numberBaseballGame.NumberBaseballGame_Lv2;
+import game.Controller;
+//import game.NumberBaseballGame;
 
 public class Main {
     public static void main(String[] args) {
-        /* 숫자 야구 게임 객체 생성 */
+        /* Level 1 */
+        // 숫자 야구 게임 객체 생성
 //        NumberBaseballGame game = new NumberBaseballGame();
-        NumberBaseballGame_Lv2 game = new NumberBaseballGame_Lv2();
+//        game.play();    // 숫자 야구 게임 시작
 
-        game.play();    // 숫자 야구 게임 시작
+        /* Level 2*/
+        Controller gameController = new Controller();
+        gameController.on();
     }
 }

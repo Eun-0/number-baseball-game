@@ -1,5 +1,3 @@
-package player;
-
 import exception.input.InvalidInputException;
 import exception.input.InvalidDuplicationException;
 import exception.input.InvalidRangeException;

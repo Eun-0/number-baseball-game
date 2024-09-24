@@ -1,7 +1,7 @@
-package game.numberBaseballGame;
+package game;
 
 import exception.input.InvalidInputException;
-import display.Display;
+import Display;
 import player.Player;
 
 import java.util.Iterator;
