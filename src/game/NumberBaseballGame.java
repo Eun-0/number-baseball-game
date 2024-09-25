@@ -32,7 +32,7 @@ public class NumberBaseballGame {
         int randomCount = 3;    // 자릿수만큼 난수 생성; initalCapacity와 동일한 값을 갖습니다.
         boolean flag = false;
         do {
-            flag = this.answer.add(randomNumber.nextInt(10));
+            flag = this.answer.add(randomNumber.nextInt(9) + 1);    // 1 ~ 9
             if (flag) {
                 randomCount--;
             }
@@ -42,14 +42,17 @@ public class NumberBaseballGame {
 
     /* Method */
     // 게임 실행 메서드 //
-    public void play(){
+    public int play(){
         Display display = new Display();
         display.displayStartGame();
 
         Player player = new Player();
         display.displayAnswer(this.answer); // 생성된 정답 확인
+
+        int trial = 0;
         while (true) {
             try {
+                trial++;
                 display.displayGameProgress();
                 player.scanInput();
                 compareAnswerWithInput(this.getAnswer(), player.getInput());
@@ -62,7 +65,7 @@ public class NumberBaseballGame {
                 System.out.println(e.getMessage());
             }
         }
-
+        return trial;
     }
 
     // 정답 확인 메서드 //

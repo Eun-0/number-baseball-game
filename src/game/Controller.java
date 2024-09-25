@@ -9,6 +9,7 @@ public class Controller {
     public void on() {
         boolean status = true;
         Display controllerDisplay = new Display();
+        History gameHistory = new History();
 
         while (status) {
             controllerDisplay.displayController();
@@ -19,10 +20,12 @@ public class Controller {
                 case "1":
                     /* Level 1에서 구현한 기본 숫자 야구 게임 */
                     NumberBaseballGame game = new NumberBaseballGame();
-                    game.play();
+                    int trial = game.play();
+                    gameHistory.recordTrial(trial);
                     break;
                 case "2":
-                    System.out.println("현재 구현하지 않습니다.");
+//                    System.out.println("현재 구현하지 않습니다.");
+                    controllerDisplay.displayHistory(gameHistory.getHistory());
                     break;
                 case "3":
                     controllerDisplay.displayEndGame();

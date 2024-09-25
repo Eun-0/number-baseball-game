@@ -18,41 +18,37 @@ public class Player {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
-        int num = validateInputType(input);
-        validateInputRange(num);
-        validateDuplication(num);
+        parsingInput(input);
     }
 
-    private int validateInputType(String inputStr) throws InvalidTypeException {
-        int inputNumber;
+    private void parsingInput(String inputStr) throws InvalidInputException {
         try {
-            inputNumber = Integer.parseInt(inputStr);
+            int inputNum = Integer.parseInt(inputStr);  // 숫자만으로 이루어져있는가
+
+            if (inputNum < 111 || inputNum > 999) {     // 세자릿수 체크
+                throw new InvalidRangeException(inputStr);
+            }
+
+            boolean duplicationFlag = false;            // 중복 여부 확인
+            int count = 3;                              // 자릿수
+            int temp = 0;
+
+            for (int i = 0; i < count; i++) {
+                temp = inputNum / (int)(Math.pow(10, count-1-i));
+                if (temp == 0) {                        // 1 ~ 9 자연수
+                    throw new InvalidRangeException(inputStr);
+                }
+                duplicationFlag = this.input.add(temp);
+//                duplicationFlag = this.input.add( inputNum / (int)(Math.pow(10, count-1-i)) );
+                if (!duplicationFlag) {                 // 중복 비 허용
+                    throw new InvalidDuplicationException(inputStr);
+                } else {
+                    inputNum %= (int) Math.pow(10, count-1-i);
+                }
+            }
         } catch (NumberFormatException e) {
             throw new InvalidTypeException(inputStr);
         }
-        return inputNumber;
-    }
-
-    private void validateInputRange(int inputInt) throws InvalidRangeException {
-        if (inputInt < 0 || inputInt > 999) {
-            throw new InvalidRangeException(inputInt);
-        }
-    }
-
-    private void validateDuplication(int inputInt) throws InvalidDuplicationException {
-        boolean duplicationFlag = false;
-        int count = 3;
-        int temp = inputInt;
-
-        for (int i = 0; i < count; i++) {
-            duplicationFlag = this.input.add( temp / (int)(Math.pow(10, count-1-i)) );
-            if (!duplicationFlag) {
-                throw new InvalidDuplicationException(inputInt);
-            } else {
-                temp %= (int) Math.pow(10, count-1-i);
-            }
-        }
-//        System.out.println(this.input); // Parsing 잘 되었는지 확인
     }
 
     public Set<Integer> getInput() {

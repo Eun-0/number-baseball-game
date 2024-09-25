@@ -1,5 +1,6 @@
 package app;
 
+import java.util.List;
 import java.util.Set;
 
 public class Display {
@@ -33,5 +34,12 @@ public class Display {
 
     public void displayEndGame() {
         System.out.println("게임을 종료합니다!");
+    }
+
+    /* Level 3 */
+    public void displayHistory(List<Integer> gameHistory) {
+        for (int i = 0; i < gameHistory.size(); i++) {
+            System.out.println((i + 1) + "번째 게임 : 시도 횟수 " + gameHistory.get(i));
+        }
     }
 }
