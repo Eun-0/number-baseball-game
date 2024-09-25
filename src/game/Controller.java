@@ -8,16 +8,17 @@ import java.util.Scanner;
 public class Controller {
     public void on() {
         boolean status = true;
-        Display controllerDisplay = new Display();
+        Display display = new Display();
         History gameHistory = new History();
 
         while (status) {
-            controllerDisplay.displayController();
+            display.printController();
 
             Scanner scanner = new Scanner(System.in);
             String option = scanner.nextLine();
             switch (option) {
                 case "1":
+                    display.printStartGame();
                     /* Level 1에서 구현한 기본 숫자 야구 게임 */
                     NumberBaseballGame game = new NumberBaseballGame();
                     int trial = game.play();
@@ -25,10 +26,10 @@ public class Controller {
                     break;
                 case "2":
 //                    System.out.println("현재 구현하지 않습니다.");
-                    controllerDisplay.displayHistory(gameHistory.getHistory());
+                    display.printHistory(gameHistory.getHistory());
                     break;
                 case "3":
-                    controllerDisplay.displayEndGame();
+                    display.printEndGame();
                     status = false;
                     break;
                 default:

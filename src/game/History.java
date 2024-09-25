@@ -1,7 +1,6 @@
 package game;
 
 import exception.history.InvalidHistoryException;
-import exception.input.player.InvalidInputException;
 
 import java.util.ArrayList;
 import java.util.List;

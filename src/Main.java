@@ -8,7 +8,7 @@ public class Main {
 //        NumberBaseballGame game = new NumberBaseballGame();
 //        game.play();    // 숫자 야구 게임 시작
 
-        /* Level 2*/
+        /* Level 2 */
         Controller gameController = new Controller();
         gameController.on();
     }

@@ -22,6 +22,7 @@ public class NumberBaseballGame {
     private int strikeCount;
     private int ballCount;
 
+    
     /* Constructor */
     // 게임 객체 생성 시, 정답 숫자 생성
     public NumberBaseballGame() {
@@ -43,21 +44,19 @@ public class NumberBaseballGame {
     /* Method */
     // 게임 실행 메서드 //
     public int play(){
-        Display display = new Display();
-        display.displayStartGame();
-
+        Display gameDisplay = new Display();
         Player player = new Player();
-        display.displayAnswer(this.answer); // 생성된 정답 확인
+//        System.out.println(this.answer);    // 생성된 정답 확인
 
         int trial = 0;
         while (true) {
             try {
                 trial++;
-                display.displayGameProgress();
+                gameDisplay.printGameProgress();
                 player.scanInput();
                 compareAnswerWithInput(this.getAnswer(), player.getInput());
 
-                display.displayResult(this.getStrikeCount(), this.getBallCount());
+                gameDisplay.printGameResult(this.getStrikeCount(), this.getBallCount());
                 if (this.getStrikeCount() == 3) {
                     break;
                 }
